@@ -3,7 +3,7 @@
 var realFetch = require('node-fetch');
 module.exports = function(url, options) {
 	if (/^\/\//.test(url)) {
-		url = 'https:' + url;
+		url = 'http:' + url;
 	}
 	return realFetch.call(this, url, options);
 };
